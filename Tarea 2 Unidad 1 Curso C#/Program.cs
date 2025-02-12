@@ -38,7 +38,38 @@ else
 }
 Console.WriteLine("");
 
-Console.WriteLine("Programa que imprima los numeros impares del 1 al 30");
+Console.WriteLine("Programa que verifique si un número es primo o no");
+Console.WriteLine("Escriba el número");
+num1 = int.Parse(Console.ReadLine());
+bool EsPrimo = true;
+if (num1 <= 1)
+{
+    Console.WriteLine("El número no es primo.");
+    EsPrimo = false;
+}
+else
+{
+    for (int i = 2; i <= Math.Sqrt(num1); i++)
+    {
+        if (num1 % i == 0)
+        {
+            Console.WriteLine("El número no es primo.");
+            EsPrimo = false;
+        }
+    }
+
+    if (EsPrimo)
+    {
+        Console.WriteLine("El número es primo.");
+    }
+
+}
+Console.WriteLine("");
+
+
+
+
+Console.WriteLine("Programa que imprima los números impares del 1 al 30");
 for (int i = 1; i < 30; i+= 2)
 {
     Console.Write($"{i} ");
